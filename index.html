@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>사이트 이전 안내</title>
+    <style>
+        #redirectMessage {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 20px;
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="redirectMessage">
+        <p>FC모바일 특성 사이트가 다른 주소로 이전하였습니다.</p>
+        <button onclick="redirectToNewSite()">새로운 사이트로 가기</button>
+    </div>
+
+    <script>
+        // Set your latest site URL here
+        const latestSiteUrl = "https://kritikal619.github.io/trait/";
+
+        // Check if current URL matches the latest site URL
+        if (window.location.href !== latestSiteUrl) {
+            document.getElementById('redirectMessage').style.display = 'block';
+        }
+
+        function redirectToNewSite() {
+            window.location.href = latestSiteUrl;
+        }
+    </script>
+</body>
+</html>
